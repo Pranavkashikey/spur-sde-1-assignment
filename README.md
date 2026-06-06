@@ -4,6 +4,8 @@ A full-stack mini AI support agent built for the Spur founding engineer take-hom
 
 Customers chat with an AI agent that knows the policies of **Spark & Co.**, a fictional e-commerce store.
 
+Live Link:[https://spur-sde-1-assignment.vercel.app/](https://spur-sde-1-assignment.vercel.app/)
+
 ---
 
 ## Tech Stack
@@ -12,7 +14,7 @@ Customers chat with an AI agent that knows the policies of **Spark & Co.**, a fi
 |---|---|---|
 | Backend | Node.js + TypeScript + Express | Fast setup, clean typing |
 | Frontend | SvelteKit | Lightweight, reactive, compiles small |
-| Database | SQLite (via `better-sqlite3`) | Zero-config, portable, sync API is perfect for this scale |
+| Database | Pstgresql | Zero-config, portable, sync API is perfect for this scale |
 | LLM | Anthropic Claude (claude-sonnet-4) | High quality, well-structured SDK |
 | Validation | Zod | Runtime safety with TypeScript inference |
 
@@ -76,7 +78,7 @@ spur-chat/
 
 - Node.js v18+
 - npm v9+
-- An Anthropic API key (get one at [console.anthropic.com](https://console.anthropic.com))
+- A Google Api key
 
 ---
 
@@ -84,7 +86,7 @@ spur-chat/
 
 ```bash
 git clone <your-repo-url>
-cd spur-chat
+cd spur-sde-1-assignment
 ```
 
 ---
@@ -100,16 +102,6 @@ npm install
 
 ```bash
 cp .env.example .env
-```
-
-Open `backend/.env` and set:
-
-```env
-ANTHROPIC_API_KEY=sk-ant-...your-key-here...
-PORT=3001
-NODE_ENV=development
-DATABASE_PATH=./data/spur_chat.db
-CORS_ORIGIN=http://localhost:5173
 ```
 
 **Run migrations + seed:**
