@@ -1,10 +1,9 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';  // change this line
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter()
-	}
+export default {
+  kit: {
+    adapter: adapter({
+      runtime: 'nodejs20.x'  // add this
+    })
+  }
 };
-
-export default config;
