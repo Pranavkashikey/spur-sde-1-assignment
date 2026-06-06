@@ -11,7 +11,7 @@ const app = express();
 const PORT = parseInt(process.env.PORT ?? "3001", 10);
 
 app.use(cors({
-  origin: 'https://spur-chat-bot-ygzo.onrender.com', // no trailing slash
+  origin: 'https://spur-sde-1-assignment.vercel.app', // no trailing slash
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
