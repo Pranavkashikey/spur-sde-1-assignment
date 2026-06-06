@@ -11,9 +11,9 @@ const app = express();
 const PORT = parseInt(process.env.PORT ?? "3001", 10);
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN ?? "http://localhost:5173",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type"],
+  origin: 'https://spur-chat-bot-ygzo.onrender.com', // no trailing slash
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
 }));
 app.use(express.json({ limit: "1mb" }));
 app.use("/chat", chatRouter);
